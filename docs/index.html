@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdtSuite — Application & Deployment Tool Suite</title>
+  <meta name="description" content="AdtSuite generiert PowerShell-Installationsscripts für SCCM/MECM-Software-Distribution mit MVVM-WPF-Oberfläche, MECM-Integration, Mermaid-Live-Vorschau und automatischer Doku-Generierung.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #0D1117;
+      --surface:   #161B22;
+      --border:    #30363D;
+      --gold:      #BF953F;
+      --gold-soft: #FCF6BA;
+      --gold-dim:  #A0906A;
+      --fg:        #E6EDF3;
+      --fg-dim:    #7D8590;
+      --accent:    #60C8D8;
+      --warn-bg:   rgba(249,168,37,0.10);
+      --warn-bd:   rgba(249,168,37,0.40);
+      --warn-fg:   #F9A825;
+      --shadow:    0 20px 60px rgba(0,0,0,0.45);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(ellipse at top, #1a2332 0%, var(--bg) 60%);
+      color: var(--fg);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    code, pre { font-family: 'JetBrains Mono', Consolas, monospace; }
+
+    /* ─── Layout ──────────────────────────────────────────────── */
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; }
+    section + section { border-top: 1px solid rgba(191,149,63,0.15); }
+
+    /* ─── Header / Hero ───────────────────────────────────────── */
+    header {
+      padding: 64px 0 48px;
+      text-align: center;
+    }
+    .icon-frame {
+      width: 144px; height: 144px;
+      border-radius: 28px;
+      background: var(--surface);
+      border: 2px solid var(--gold);
+      box-shadow: var(--shadow);
+      margin: 0 auto 32px;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.3s ease;
+    }
+    .icon-frame:hover { transform: translateY(-4px); }
+    .icon-frame img { width: 132px; height: 132px; border-radius: 22px; }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 3.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--gold-soft) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .tagline {
+      font-size: 1.15rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--fg-dim);
+      font-size: 1rem;
+      max-width: 640px;
+      margin: 16px auto 0;
+    }
+
+    /* ─── Beta-Badge ──────────────────────────────────────────── */
+    .beta-banner {
+      max-width: 720px; margin: 32px auto 0;
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-bd);
+      border-radius: 8px;
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      color: var(--warn-fg);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .beta-banner strong { color: #FFD980; }
+
+    /* ─── CTA-Buttons ─────────────────────────────────────────── */
+    .cta-row {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold) 0%, #D4A843 100%);
+      color: #1A2535;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(191,149,63,0.35);
+    }
+    .btn-secondary {
+      background: rgba(191,149,63,0.10);
+      color: var(--gold-soft);
+      border-color: rgba(191,149,63,0.40);
+    }
+    .btn-secondary:hover {
+      background: rgba(191,149,63,0.20);
+    }
+
+    /* ─── Section-Titel ───────────────────────────────────────── */
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--gold-soft);
+      margin-bottom: 12px;
+    }
+    h2::before {
+      content: ''; display: inline-block;
+      width: 4px; height: 28px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin-right: 14px;
+      vertical-align: -6px;
+    }
+    .section-lead {
+      color: var(--fg-dim);
+      margin-bottom: 40px;
+      max-width: 720px;
+    }
+
+    /* ─── Feature-Grid ────────────────────────────────────────── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+    .feature:hover {
+      border-color: rgba(191,149,63,0.50);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      font-size: 1.75rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .feature h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--gold-soft);
+      margin-bottom: 8px;
+    }
+    .feature p {
+      color: var(--fg-dim);
+      font-size: 0.92rem;
+    }
+
+    /* ─── Tech-Stack-Pills ────────────────────────────────────── */
+    .stack {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 12px;
+    }
+    .pill {
+      padding: 4px 12px;
+      background: rgba(96,200,216,0.10);
+      border: 1px solid rgba(96,200,216,0.30);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ─── Footer ──────────────────────────────────────────────── */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--fg-dim);
+      font-size: 0.88rem;
+      border-top: 1px solid rgba(191,149,63,0.15);
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      margin: 0 12px;
+    }
+    footer a:hover {
+      color: var(--gold-soft);
+      text-decoration: underline;
+    }
+    .footer-row { margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="icon-frame">
+      <img src="assets/icon.png" alt="AdtSuite Icon">
+    </div>
+    <h1>AdtSuite</h1>
+    <div class="tagline">Application &amp; Deployment Tool Suite</div>
+    <p class="subtitle">
+      WPF-Desktop-Anwendung zum Generieren von <strong>PowerShell-Installations&shy;scripts</strong>
+      für SCCM/MECM-Software-Distribution &mdash; mit Live-Mermaid-Vorschau,
+      automatischer Doku-Generierung und vollständiger MECM-Integration.
+    </p>
+
+    <div class="beta-banner">
+      <span style="font-size:1.2rem;">⚠</span>
+      <span><strong>Beta-Version 1.0.0:</strong> Funktionen können sich noch ändern.
+      Bug-Reports bitte über den <em>Fehler melden</em>-Dialog in der App.</span>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/micstr76/AdtSuite/releases/latest">
+        ⬇ Neueste Version herunterladen
+      </a>
+      <a class="btn btn-secondary" href="https://github.com/micstr76/AdtSuite/issues/new/choose">
+        🐞 Bug oder Feature melden
+      </a>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Was kann AdtSuite?</h2>
+    <p class="section-lead">
+      Generiert produktionsreife PowerShell-Scripts für SCCM-Application-Deployments
+      &mdash; mit allem was eine moderne Paketierungs-Pipeline braucht.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <span class="feature-icon">📜</span>
+        <h3>PowerShell-Generator</h3>
+        <p>Install-/Uninstall-Scripts mit Pre-Checks, Logging, Pending-Reboot-Detection
+        und Branch-Logic (if/elseif/else) &mdash; alles SCCM-ready.</p>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">🎯</span>
+        <h3>MECM-Integration</h3>
+        <p>Direkte Verbindung zur ConfigMgr AdminService REST-API.
+        Detection-Methods, Requirements und Deployment-Types per UI konfigurieren.</p>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">📊</span>
+        <h3>Mermaid Live-Flow</h3>
+        <p>Visualisierung der Skript-Logik in Echtzeit mit drei Detail-Levels
+        (Übersicht / Details / Voll). Export als Markdown oder HTML.</p>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">📚</span>
+        <h3>Automatische Doku</h3>
+        <p>Generiert lesbare Dokumentation für Script und MECM-Anwendung &mdash;
+        zur Übergabe an Service-Desk oder Audit-Stellen.</p>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">🧩</span>
+        <h3>Snippet-Library</h3>
+        <p>Wiederverwendbare Code-Bausteine mit zentraler UNC-Source,
+        ZIP-Export/Import und Vorlagen pro Kategorie.</p>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">🌗</span>
+        <h3>Modern + Classic UI</h3>
+        <p>Zwei vollwertige Oberflächen: schlankes Dark-Gold-Modern oder
+        klassisches Layout mit drei Farbschemata.</p>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">🌍</span>
+        <h3>Mehrsprachig</h3>
+        <p>Vollständige DE/EN-Lokalisierung mit Live-Umschaltung &mdash;
+        kein Neustart, keine RESX-Kompilierung.</p>
+      </div>
+
+      <div class="feature">
+        <span class="feature-icon">🔄</span>
+        <h3>Auto-Update-Check</h3>
+        <p>Beim Start und auf Klick prüft die App ob eine neue Version verfügbar ist
+        &mdash; ohne Self-Updater, alles transparent über Browser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tech">
+  <div class="wrap">
+    <h2>Tech-Stack</h2>
+    <p class="section-lead">
+      Modern, gut wartbar, ohne Legacy-Ballast.
+    </p>
+    <div class="stack">
+      <span class="pill">.NET 9</span>
+      <span class="pill">WPF</span>
+      <span class="pill">MVVM</span>
+      <span class="pill">C# 13</span>
+      <span class="pill">AvalonEdit</span>
+      <span class="pill">WebView2</span>
+      <span class="pill">Markdig</span>
+      <span class="pill">Mermaid.js</span>
+      <span class="pill">ConfigMgr REST-API</span>
+      <span class="pill">PowerShell 5.1 / 7.x</span>
+    </div>
+  </div>
+</section>
+
+<section id="links">
+  <div class="wrap">
+    <h2>Mehr</h2>
+    <div class="features">
+      <div class="feature">
+        <span class="feature-icon">📥</span>
+        <h3>Releases</h3>
+        <p style="margin-bottom:12px;">Alle Setup-Pakete und Release-Notes auf GitHub.</p>
+        <a class="btn btn-secondary" href="https://github.com/micstr76/AdtSuite/releases">Zum Releases-Tab</a>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">💬</span>
+        <h3>Issues</h3>
+        <p style="margin-bottom:12px;">Bug-Reports und Feature-Requests willkommen.</p>
+        <a class="btn btn-secondary" href="https://github.com/micstr76/AdtSuite/issues">Issues öffnen</a>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🛡</span>
+        <h3>Security</h3>
+        <p style="margin-bottom:12px;">Sicherheitslücken bitte privat melden.</p>
+        <a class="btn btn-secondary" href="https://github.com/micstr76/AdtSuite/blob/main/SECURITY.md">Security-Policy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-row">
+    <a href="https://github.com/micstr76/AdtSuite">GitHub</a> ·
+    <a href="https://github.com/micstr76/AdtSuite/blob/main/LICENSE">MIT License</a> ·
+    <a href="https://github.com/micstr76/AdtSuite/blob/main/SECURITY.md">Security</a>
+  </div>
+  <div>© 2026 Michael Strasser · Built with .NET 9 &amp; WPF</div>
+</footer>
+
+</body>
+</html>
