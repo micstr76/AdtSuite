@@ -1,6 +1,6 @@
 {
-  "latestVersion": "1.0.0",
-  "releaseDate":   "2026-05-04",
+  "latestVersion": "1.0.1",
+  "releaseDate":   "2026-05-05",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseNotes":  "Beta-Start: PS-Script-Generator + MECM-Integration + Doku-Tab + Live-Mermaid-Vorschau"
+  "releaseNotes":  "Beta-Hotfix: Mermaid Live-Vorschau zeigte Geister-Text über dem Diagramm — behoben."
 }
