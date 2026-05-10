@@ -1,6 +1,7 @@
 {
-  "latestVersion": "1.0.2",
-  "releaseDate":   "2026-05-06",
+  "latestVersion": "1.0.3",
+  "releaseDate":   "2026-05-10",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseNotes":  "Beta-Update: Lizenz-Anzeige erweitert, kleinere Stabilitäts-Verbesserungen."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.0.3-beta",
+  "releaseNotes":  "Beta-Update: Lizenz-Anzeige verbessert, kleinere Stabilitäts-Verbesserungen."
 }
