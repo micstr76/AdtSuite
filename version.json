@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.0.3",
-  "releaseDate":   "2026-05-10",
+  "latestVersion": "1.0.4",
+  "releaseDate":   "2026-05-12",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.0.3-beta",
-  "releaseNotes":  "Beta-Update: Lizenz-Anzeige verbessert, kleinere Stabilitäts-Verbesserungen."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.0.4-beta",
+  "releaseNotes":  "Beta-Update: Manueller Snippet-Austausch zwischen Testern über UNC-Pfad."
 }
