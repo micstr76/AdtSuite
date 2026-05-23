@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.0.6",
-  "releaseDate":   "2026-05-21",
+  "latestVersion": "1.0.7",
+  "releaseDate":   "2026-05-23",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.0.6-beta",
-  "releaseNotes":  "Beta-Update: Script-Validierung (Quick-Check + optionaler PSScriptAnalyzer-Tiefencheck) in Modern & Classic, Lizenz-Aktivierung direkt im Willkommens-Dialog, stabilere Lizenzpruefung bei Updates."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.0.7-beta",
+  "releaseNotes":  "Beta-Update: Zwei neue SCCM-Validierungs-Checks (msiexec ohne Silent-Switch, unkontrollierter Reboot), konfigurierbarer externer Code-Editor fuer 'Im Editor oeffnen', manueller Deinstallations-Befehl pro Uninstall-Eintrag (Override), vereinfachte Versionsabgleich-Ansicht mit Quellen-Filter und Snippet-Platzhalter beim Einfuegen."
 }
