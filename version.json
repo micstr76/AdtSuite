@@ -1,7 +1,8 @@
 {
-  "latestVersion": "1.2.0",
-  "releaseDate":   "2026-05-29",
+  "latestVersion": "1.3.0",
+  "releaseDate":   "2026-07-22",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.2.0-beta",
-  "releaseNotes":  "Beta-Update 1.2.0: Neu - IntuneWin-Export (lokal). Generierte Scripts koennen jetzt als Intune-Win32-Paket (.intunewin) exportiert werden (Button 'Als IntuneWin exportieren' unter dem Flow-Diagramm, Modern + Classic). AdtSuite ruft Microsofts IntuneWinAppUtil.exe auf und erzeugt zusaetzlich detection.json (aus dem Detection-Tree der aktiven DeploymentType, sonst MSI-ProductCode-Fallback) sowie eine intune-readme.txt mit Upload-Anleitung. Reiner Generator - der Upload ins Tenant bleibt manuell."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.3.0-beta",
+  "releaseNotes":  "Beta-Update 1.3.0: MECM-Deployment verteilt jetzt korrekt Content (Distribution Point/DP-Group waehlbar) und bietet User-Experience-Optionen (Benachrichtigung, Aktivitaeten ausserhalb des Wartungsfensters). Monitoring zeigt jetzt korrekte Geraete-Anzahlen und ist kopierbar. Ziel-Collection sowie DP-Felder als Combobox mit Live-Laden aus ConfigMgr. Lizenzanfrage bietet jetzt eine Stufenauswahl (Trial/Standard/Pro/Enterprise); ein abgelaufener globaler Beta-Cutoff, der neue Trials blockierte, wurde entfernt. MECM-Hilfe grundlegend ueberarbeitet, einheitliches Tab-Design, Fix fuer schlecht lesbaren Hinweistext im Classic-Theme."
 }
+
