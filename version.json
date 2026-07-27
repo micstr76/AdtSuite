@@ -1,8 +1,8 @@
 {
-  "latestVersion": "1.3.0",
-  "releaseDate":   "2026-07-22",
+  "latestVersion": "1.4.0",
+  "releaseDate":   "2026-07-27",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.3.0-beta",
-  "releaseNotes":  "Beta-Update 1.3.0: MECM-Deployment verteilt jetzt korrekt Content (Distribution Point/DP-Group waehlbar) und bietet User-Experience-Optionen (Benachrichtigung, Aktivitaeten ausserhalb des Wartungsfensters). Monitoring zeigt jetzt korrekte Geraete-Anzahlen und ist kopierbar. Ziel-Collection sowie DP-Felder als Combobox mit Live-Laden aus ConfigMgr. Lizenzanfrage bietet jetzt eine Stufenauswahl (Trial/Standard/Pro/Enterprise); ein abgelaufener globaler Beta-Cutoff, der neue Trials blockierte, wurde entfernt. MECM-Hilfe grundlegend ueberarbeitet, einheitliches Tab-Design, Fix fuer schlecht lesbaren Hinweistext im Classic-Theme."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.4.0",
+  "releaseNotes":  "AdtSuite 1.4.0 (erste Version nach Ende der Beta-Phase): PS-Script-Tab neu strukturiert (Installer-Optionen zusammengelegt, Prechecks in einem Tab mit drei Unterreitern gebuendelt, automatische Live-Vorschau, Dirty-Tracker gegen versehentlichen Datenverlust bei Schliessen/Theme-Wechsel, Bestaetigung vor dem Loeschen von Eintraegen). MECM-Tab: Collections- und DP-Laden entkoppelt, Ziel-Collection filtert live. Updates-Tab: Reload aus SCCM/Excel loescht keine Todo-Daten mehr. Fix fuer Validierungs-Fehlalarm bei msiexec-Log-Meldungen."
 }
 
