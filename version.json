@@ -1,8 +1,7 @@
 {
-  "latestVersion": "1.4.0",
-  "releaseDate":   "2026-07-27",
+  "latestVersion": "1.5.0",
+  "releaseDate":   "2026-08-07",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.4.0",
-  "releaseNotes":  "AdtSuite 1.4.0 (erste Version nach Ende der Beta-Phase): PS-Script-Tab neu strukturiert (Installer-Optionen zusammengelegt, Prechecks in einem Tab mit drei Unterreitern gebuendelt, automatische Live-Vorschau, Dirty-Tracker gegen versehentlichen Datenverlust bei Schliessen/Theme-Wechsel, Bestaetigung vor dem Loeschen von Eintraegen). MECM-Tab: Collections- und DP-Laden entkoppelt, Ziel-Collection filtert live. Updates-Tab: Reload aus SCCM/Excel loescht keine Todo-Daten mehr. Fix fuer Validierungs-Fehlalarm bei msiexec-Log-Meldungen."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.5.0",
+  "releaseNotes":  "AdtSuite 1.5.0: Installer in Unterordnern des Quellpfads werden jetzt korrekt gefunden (bisher wurde nur der Dateiname gespeichert). Die Uninstall-Argumente eines Installer-Eintrags wirken jetzt tatsaechlich - der MSI-ProductCode wird pro Eintrag gelesen und beim Deinstallieren direkt per msiexec /x verwendet; ein Symbol in der Liste zeigt an, welche Eintraege automatisch deinstalliert werden. EXE-Deinstallation ueber cmd /c funktioniert jetzt auch bei Pfaden mit Leerzeichen. Der MSI-Produktname wird als Beschreibung uebernommen und im Install-Log statt des Dateinamens ausgegeben. Classic-Fenster fuellt Name/Version/Hersteller beim Durchsuchen jetzt wie Modern vor. Startfenstergroesse auf 1920x1080 angepasst."
 }
-
