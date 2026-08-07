@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.5.0",
+  "latestVersion": "1.5.1",
   "releaseDate":   "2026-08-07",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.5.0",
-  "releaseNotes":  "AdtSuite 1.5.0: Installer in Unterordnern des Quellpfads werden jetzt korrekt gefunden (bisher wurde nur der Dateiname gespeichert). Die Uninstall-Argumente eines Installer-Eintrags wirken jetzt tatsaechlich - der MSI-ProductCode wird pro Eintrag gelesen und beim Deinstallieren direkt per msiexec /x verwendet; ein Symbol in der Liste zeigt an, welche Eintraege automatisch deinstalliert werden. EXE-Deinstallation ueber cmd /c funktioniert jetzt auch bei Pfaden mit Leerzeichen. Der MSI-Produktname wird als Beschreibung uebernommen und im Install-Log statt des Dateinamens ausgegeben. Classic-Fenster fuellt Name/Version/Hersteller beim Durchsuchen jetzt wie Modern vor. Startfenstergroesse auf 1920x1080 angepasst."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.5.1",
+  "releaseNotes":  "AdtSuite 1.5.1 - wichtiges Update fuer alle 1.5.0-Nutzer. In 1.5.0 waren die Profilverwaltung und der MECM-Import/-Export ohne Fehlermeldung wirkungslos: 'Profil speichern' schrieb eine leere Datei, und das Laden eines gueltigen Profils setzte die aktuelle Konfiguration stillschweigend auf Standardwerte zurueck. Mit 1.5.0 gespeicherte Profile sind unwiederbringlich leer und muessen neu angelegt werden; Profile aus 1.4.0 und aelter sind unbeschaedigt und laden wieder korrekt. Ausserdem behoben: Drag-and-Drop einer MSI setzt jetzt auch den Zielpfad, die Classic-Oberflaeche nimmt Drag-and-Drop auf Quell- und Zielpfad wieder an, und beim Ablegen einer Datei auf dem Quellpfad-Feld entsteht kein doppelter Installer-Eintrag mehr."
 }
