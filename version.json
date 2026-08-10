@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.5.1",
+  "latestVersion": "1.6.0",
   "releaseDate":   "2026-08-07",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.5.1",
-  "releaseNotes":  "AdtSuite 1.5.1 - wichtiges Update fuer alle 1.5.0-Nutzer. In 1.5.0 waren die Profilverwaltung und der MECM-Import/-Export ohne Fehlermeldung wirkungslos: 'Profil speichern' schrieb eine leere Datei, und das Laden eines gueltigen Profils setzte die aktuelle Konfiguration stillschweigend auf Standardwerte zurueck. Mit 1.5.0 gespeicherte Profile sind unwiederbringlich leer und muessen neu angelegt werden; Profile aus 1.4.0 und aelter sind unbeschaedigt und laden wieder korrekt. Ausserdem behoben: Drag-and-Drop einer MSI setzt jetzt auch den Zielpfad, die Classic-Oberflaeche nimmt Drag-and-Drop auf Quell- und Zielpfad wieder an, und beim Ablegen einer Datei auf dem Quellpfad-Feld entsteht kein doppelter Installer-Eintrag mehr."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.6.0",
+  "releaseNotes":  "AdtSuite 1.6.0 bringt MST-Transform-Unterstuetzung: MSI-Eintraege haben ein eigenes Feld fuer Transform-Dateien, mehrere Transforms sind per Semikolon moeglich, und liegt genau eine .mst neben der MSI, wird sie automatisch eingetragen. Das erzeugte Script loest jeden Transform-Pfad gegen das Script-Verzeichnis auf, wodurch auch Pfade mit Leerzeichen und Unterordner funktionieren. Eine neue Pruefregel warnt vor doppelt gesetzten Transforms. Ausserdem behoben: Die Deinstallation von Bundle-Installern lief ins Leere, wenn sich das Produkt unter einem GUID-foermigen Registry-Schluessel eintraegt, ohne eine MSI zu sein - ein vorhandener Deinstallations-Befehl wird jetzt bevorzugt. Und der Zielpfad blieb beim Durchsuchen ueber die Schaltflaeche leer."
 }
