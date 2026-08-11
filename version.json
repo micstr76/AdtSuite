@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.6.0",
-  "releaseDate":   "2026-08-07",
+  "latestVersion": "1.7.0",
+  "releaseDate":   "2026-08-11",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.6.0",
-  "releaseNotes":  "AdtSuite 1.6.0 bringt MST-Transform-Unterstuetzung: MSI-Eintraege haben ein eigenes Feld fuer Transform-Dateien, mehrere Transforms sind per Semikolon moeglich, und liegt genau eine .mst neben der MSI, wird sie automatisch eingetragen. Das erzeugte Script loest jeden Transform-Pfad gegen das Script-Verzeichnis auf, wodurch auch Pfade mit Leerzeichen und Unterordner funktionieren. Eine neue Pruefregel warnt vor doppelt gesetzten Transforms. Ausserdem behoben: Die Deinstallation von Bundle-Installern lief ins Leere, wenn sich das Produkt unter einem GUID-foermigen Registry-Schluessel eintraegt, ohne eine MSI zu sein - ein vorhandener Deinstallations-Befehl wird jetzt bevorzugt. Und der Zielpfad blieb beim Durchsuchen ueber die Schaltflaeche leer."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.7.0",
+  "releaseNotes":  "AdtSuite 1.7.0 bringt ein Monitoring-Dashboard im MECM-Tab: neben der bisherigen PowerShell-Ausgabe zeigt eine neue Ansicht die Statusverteilung als Ringdiagramm sowie eine Geraeteliste mit Rechnername, Benutzer, Status, Fehlercode und Beschreibung. Ein Klick auf ein Diagrammsegment filtert die Liste. Besonders wichtig: Geraete, die ueberhaupt nie gemeldet haben, liefert die Statusabfrage von ConfigMgr gar nicht zurueck - eine Erfolgsquote allein ueber die gemeldeten Geraete faellt dadurch systematisch zu guenstig aus. AdtSuite fragt zusaetzlich die Mitgliederzahl der Collection ab und weist die Differenz eigens aus; in einer Produktivumgebung mit 2326 Geraeten ergab das 54,1 Prozent statt 83,6 Prozent. Dazu: Rechnernamen kopieren, CSV-Export der sichtbaren Zeilen und ein erzeugter PowerShell-Befehl zum erneuten Anstossen der Bereitstellung, der nur in die Zwischenablage gelegt wird."
 }
