@@ -1,21 +1,122 @@
-MIT License
+AdtSuite — Nutzungsbedingungen / Terms of Use
+Copyright (c) 2026 Michael Strasser. Alle Rechte vorbehalten. / All rights reserved.
 
-Copyright (c) 2026 Michael Strasser
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+================================================================================
+DEUTSCH
+================================================================================
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Gegenstand
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+   Diese Bedingungen gelten fuer die Anwendung AdtSuite einschliesslich der
+   bereitgestellten Installationspakete und der zugehoerigen Dokumentation.
+
+2. Nutzungsrecht
+
+   AdtSuite ist in der Free-Version unentgeltlich nutzbar, auch in Unternehmen.
+   Das Nutzungsrecht ist nicht ausschliesslich und nicht uebertragbar.
+
+   Erweiterte Funktionen erfordern einen Lizenzschluessel. Dieser wird direkt
+   ueber die Anwendung angefordert und ist an den jeweiligen Nutzer gebunden.
+
+3. Einschraenkungen
+
+   Ohne vorherige schriftliche Zustimmung ist untersagt:
+
+   a) die Weitergabe, Vermietung oder der Verkauf der Anwendung oder der
+      Installationspakete an Dritte. Jeder Nutzer bezieht die Anwendung selbst
+      und fordert einen eigenen Lizenzschluessel ueber die Anwendung an;
+
+   b) das Zurueckentwickeln, Dekompilieren oder Disassemblieren, soweit nicht
+      zwingendes Recht dies gestattet;
+
+   c) das Entfernen oder Umgehen der Lizenzpruefung.
+
+4. Eigentum
+
+   AdtSuite wird lizenziert, nicht verkauft. Alle Rechte am Programm und am
+   Quellcode verbleiben beim Urheber.
+
+5. Kuenftige Versionen
+
+   Fuer kuenftige Versionen koennen abweichende Bedingungen gelten,
+   insbesondere entgeltliche. Bereits bezogene Versionen bleiben davon
+   unberuehrt.
+
+6. Gewaehrleistung und Haftung
+
+   Die Anwendung wird ohne Gewaehr bereitgestellt. Eine Haftung besteht nur bei
+   Vorsatz und grober Fahrlaessigkeit sowie in den Faellen zwingender
+   gesetzlicher Haftung. Zwingende gesetzliche Rechte bleiben unberuehrt.
+
+7. Rueckmeldungen
+
+   Vorschlaege und Fehlermeldungen duerfen ohne Verguetung zur Verbesserung der
+   Anwendung verwendet werden.
+
+
+================================================================================
+ENGLISH (non-binding translation — in case of doubt the German version applies)
+================================================================================
+
+1. Subject
+
+   These terms apply to the AdtSuite application, including the provided
+   installation packages and the accompanying documentation.
+
+2. Right of use
+
+   The free edition of AdtSuite may be used free of charge, including in
+   commercial environments. The right of use is non-exclusive and
+   non-transferable.
+
+   Advanced features require a license key. The key is requested directly from
+   within the application and is tied to the individual user.
+
+3. Restrictions
+
+   Without prior written consent, the following are prohibited:
+
+   a) distributing, renting or selling the application or its installation
+      packages to third parties. Each user obtains the application themselves
+      and requests their own license key from within the application;
+
+   b) reverse engineering, decompiling or disassembling, except where mandatory
+      law permits;
+
+   c) removing or circumventing the license check.
+
+4. Ownership
+
+   AdtSuite is licensed, not sold. All rights to the program and its source
+   code remain with the author.
+
+5. Future versions
+
+   Different terms may apply to future versions, including paid terms. Versions
+   already obtained are not affected.
+
+6. Warranty and liability
+
+   The application is provided without warranty. Liability is limited to intent
+   and gross negligence, as well as cases of mandatory statutory liability.
+   Mandatory statutory rights remain unaffected.
+
+7. Feedback
+
+   Suggestions and bug reports may be used to improve the application without
+   compensation.
+
+
+================================================================================
+Hinweis zu frueheren Versionen / Note on earlier releases
+================================================================================
+
+Versionen bis einschliesslich 1.7.0 wurden unter der MIT-Lizenz veroeffentlicht.
+Fuer diese Versionen gelten weiterhin die damaligen Bedingungen; die
+vorliegenden Nutzungsbedingungen gelten fuer alle spaeter veroeffentlichten
+Versionen.
+
+Releases up to and including 1.7.0 were published under the MIT license. Those
+terms continue to apply to those versions; the present terms apply to all later
+releases.
