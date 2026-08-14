@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.8.1",
-  "releaseDate":   "2026-08-13",
+  "latestVersion": "1.9.0",
+  "releaseDate":   "2026-08-14",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.8.1",
-  "releaseNotes":  "AdtSuite 1.8.1 behebt einen Fehler im erzeugten Deinstallations-Skript: sobald bei einem MSI-Eintrag Uninstall-Argumente hinterlegt waren, wurde dasselbe Produkt zweimal deinstalliert - einmal ueber den ProductCode des Eintrags und ein zweites Mal ueber den globalen ProductCode bzw. den Registry-Lookup. Der zweite Aufruf fand nichts mehr vor und konnte dazu fuehren, dass eine erfolgreiche Deinstallation in SCCM als fehlgeschlagen gemeldet wurde. Betroffen sind die Versionen 1.5.0 bis 1.8.0; wer Pakete mit hinterlegten Uninstall-Argumenten erstellt hat, sollte die betroffenen Deinstallations-Skripte neu erzeugen. Ausserdem behoben: der Fenstertitel fehlte in der modernen Oberflaeche."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.9.0",
+  "releaseNotes":  "AdtSuite 1.9.0 bringt drei Neuerungen: Eine Option erzeugt zusaetzlich ein Erkennungs-Script (detection.ps1) fuer SCCM/MECM, das die ProductCodes der MSI-Eintraege in der Registry prueft und bei hinterlegter Version auch die installierte Version vergleicht. Die Application-Liste im MECM-Tab laesst sich jetzt als CSV oder Excel exportieren - bisher waren Tabellen nur einlesbar. Und ein neuer Knopf uebernimmt Name, Hersteller, Version und Beschreibung aus der MSI im Content-Ordner, wobei nur leere Felder gefuellt werden. Ausserdem behoben: der CSV-Import verarbeitet jetzt mehrzeilige Felder, der Bereich Import/Export ist nach Verwendungszweck geordnet, und beim Deployment-Typ Script wirkt sich die Auswahl der Installationsdatei nun tatsaechlich aus."
 }
