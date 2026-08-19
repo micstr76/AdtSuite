@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.9.0",
+  "latestVersion": "1.9.1",
   "releaseDate":   "2026-08-14",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.9.0",
-  "releaseNotes":  "AdtSuite 1.9.0 bringt drei Neuerungen: Eine Option erzeugt zusaetzlich ein Erkennungs-Script (detection.ps1) fuer SCCM/MECM, das die ProductCodes der MSI-Eintraege in der Registry prueft und bei hinterlegter Version auch die installierte Version vergleicht. Die Application-Liste im MECM-Tab laesst sich jetzt als CSV oder Excel exportieren - bisher waren Tabellen nur einlesbar. Und ein neuer Knopf uebernimmt Name, Hersteller, Version und Beschreibung aus der MSI im Content-Ordner, wobei nur leere Felder gefuellt werden. Ausserdem behoben: der CSV-Import verarbeitet jetzt mehrzeilige Felder, der Bereich Import/Export ist nach Verwendungszweck geordnet, und beim Deployment-Typ Script wirkt sich die Auswahl der Installationsdatei nun tatsaechlich aus."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.9.1",
+  "releaseNotes":  "AdtSuite 1.9.1 behebt Fehler in den erzeugten Skripten. Wichtigster Punkt: Fuer MSI-Installer wurde kein Protokoll geschrieben, wenn die Datei in einem Unterordner des Quellordners liegt - der Protokollname entstand aus dem Dateinamen samt Pfad, und msiexec konnte die Datei im nicht vorhandenen Unterordner stillschweigend nicht anlegen. Betrifft alle Versionen ab 1.5.0; bereits erzeugte Skripte sollten neu erstellt werden. Ausserdem behoben: das Log-Verzeichnis wird angelegt falls es fehlt, Installer ohne Argumente liessen das Skript mit Fehlercode 999 fehlschlagen, und Argumente werden nicht mehr an Leerzeichen zerlegt. Keine Aenderungen an der Oberflaeche gegenueber 1.9.0."
 }
