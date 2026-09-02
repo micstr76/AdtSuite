@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.10.0",
-  "releaseDate":   "2026-08-26",
+  "latestVersion": "1.10.1",
+  "releaseDate":   "2026-09-02",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.10.0",
-  "releaseNotes":  "AdtSuite 1.10.0 behebt mehrere Fehler in den erzeugten Skripten und im MECM-Import; bereits erzeugte Skripte sollten neu erstellt werden. Wichtigste Punkte: Deployment Types wurden beim Import gar nicht angelegt, weil die Erkennungsmethode erst nachtraeglich gesetzt wurde. Bei Paketen mit mehreren Installationsdateien pruefte das Erkennungsskript alle Komponenten gegen dieselbe Version, wodurch vorhandene Komponenten als fehlend galten und SCCM das Paket endlos neu verteilte. Ein Neustart-Wunsch konnte einen echten Fehler ueberdecken, sodass ein fehlgeschlagenes Paket als erfolgreich gemeldet wurde. Ausserdem behoben: Skripte ohne Protokollierung brachen bei Fehlern ab, fuer Installationsdateien in Unterordnern entstand kein Protokoll, Umgebungsvariablen beim Kopieren wurden nicht aufgeloest. Neu sind Rueckgabewerte und Betriebssystem-Anforderungen im Deployment Type sowie einklappbare Optionen-Bereiche."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.10.1",
+  "releaseNotes":  "AdtSuite 1.10.1 behebt Fehler in den erzeugten Skripten und im IntuneWin-Export und bringt die Anbindung an Intune; bereits erzeugte Skripte sollten neu erstellt werden. Wichtigster Punkt: Skripte brachen ab, wenn der eingetragene Protokoll-Ordner noch nicht existierte - und zwar vor der Installation, nicht mittendrin. Ausserdem wurde das erzeugte Uninstall-Skript im Intune-Paket nicht verwendet, jede Anwendung hiess dort install.cmd, und der IntuneWin-Export fragte trotz eingetragener Pfade nach dem Ordner. Neu ist das direkte Anlegen von Anwendungen in Intune samt Rueckgabewerten und Erkennungsregeln, die Anmeldung laeuft ueber den Browser. Dazu ein steuerbares MSI-Protokoll und Betriebssystem-Anforderungen als Auswahlliste."
 }
