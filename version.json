@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.10.1",
+  "latestVersion": "1.11.0",
   "releaseDate":   "2026-09-02",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.10.1",
-  "releaseNotes":  "AdtSuite 1.10.1 behebt Fehler in den erzeugten Skripten und im IntuneWin-Export und bringt die Anbindung an Intune; bereits erzeugte Skripte sollten neu erstellt werden. Wichtigster Punkt: Skripte brachen ab, wenn der eingetragene Protokoll-Ordner noch nicht existierte - und zwar vor der Installation, nicht mittendrin. Ausserdem wurde das erzeugte Uninstall-Skript im Intune-Paket nicht verwendet, jede Anwendung hiess dort install.cmd, und der IntuneWin-Export fragte trotz eingetragener Pfade nach dem Ordner. Neu ist das direkte Anlegen von Anwendungen in Intune samt Rueckgabewerten und Erkennungsregeln, die Anmeldung laeuft ueber den Browser. Dazu ein steuerbares MSI-Protokoll und Betriebssystem-Anforderungen als Auswahlliste."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.11.0",
+  "releaseNotes":  "AdtSuite 1.11.0 uebertraegt Anwendungen vollstaendig nach Intune: anlegen, Paket hochladen und Gruppen zuweisen in einem Schritt. Die Anmeldung laeuft ueber den Browser, ein Kennwort wird nicht gespeichert. Rueckgabewerte und Erkennungsregeln kommen aus der Konfiguration - ein Prozess-Precheck wird als spaeter erneut versuchen eingetragen, damit Intune die Installation wiederholt statt einen Fehler zu melden. Die Zuweisung erfolgt wahlweise erforderlich oder verfuegbar an Gruppen aus Entra. Das Logo stammt aus dem Symbol der Installationsdatei; ein eigenes Bild namens logo.png im Quellordner hat Vorrang und ist bei MSI-Paketen der einzige Weg. Voraussetzung ist eine App-Registrierung in Entra mit den Berechtigungen DeviceManagementApps.ReadWrite.All und Group.Read.All."
 }
