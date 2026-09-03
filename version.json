@@ -1,7 +1,7 @@
 {
-  "latestVersion": "1.11.1",
+  "latestVersion": "2.0.0",
   "releaseDate":   "2026-09-03",
   "downloadUrl":   "https://github.com/micstr76/AdtSuite/releases/latest",
-  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v1.11.1",
-  "releaseNotes":  "AdtSuite 1.11.1 behebt Fehler an der Intune-Anbindung aus 1.11.0. Wichtigster Punkt: der Intune-Knopf legte jedes Mal eine neue Anwendung an, weil die Suche nach vorhandenen nie etwas fand - jetzt wird gefragt, ob aktualisiert oder zusaetzlich angelegt werden soll, und bei mehreren gleichnamigen laesst sich die gewuenschte auswaehlen. Ausserdem blieben in den Intune-Dialogen alle Beschriftungen leer, das hinterlegte Logo wurde meist nicht gefunden, und die Erfolgsmeldung behauptete die Datei sei nicht hochgeladen obwohl sie es war. Neu ist eine Exit-Code-Uebersicht in den Einstellungen: die Codes lassen sich aendern, Skripte und Rueckgabewerte folgen automatisch."
+  "releaseUrl":    "https://github.com/micstr76/AdtSuite/releases/tag/v2.0.0",
+  "releaseNotes":  "AdtSuite 2.0.0 beendet die Beta-Phase und aendert damit das Lizenzmodell. Waehrend der Beta waren alle Funktionen frei nutzbar; ab dieser Version laeuft AdtSuite ohne Lizenz im Free-Umfang: ein Installationspaket, ein Registry-Eintrag, ein Datei- oder Ordner-Eintrag, dazu MSI Reader, CLI-Modus und Updates wie bisher. Dokumentations-Generator und Mermaid-Diagramme brauchen eine Lizenz ab Standard, Snippets, MECM und Intune ab Pro. Bestehende Profile bleiben erhalten - sie lassen sich weiterhin oeffnen und ansehen, im Free-Umfang aber nicht erweitern und nicht mehr in ein Skript umsetzen. Die Testphase wird jetzt angefordert statt automatisch gestartet: 7 Tage voller Funktionsumfang, der Schluessel kommt per Mail. Wer keine Lizenz hat oder auf die Testlizenz wartet, arbeitet im Free-Umfang weiter statt ausgesperrt zu werden."
 }
